@@ -25,6 +25,9 @@
                         <th>First Name</th>
                         <th>Last Name</th>
                         <th>Full Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Image</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +36,10 @@
                             <td>{{ $customer->id }}</td>
                             <td>{{ $customer->first_name }}</td>
                             <td>{{ $customer->last_name }}</td>
-                            <td>{{ $customer->first_name . ' ' .$customer->last_name }}</td>
+                            <td>{{ $customer->full_name }}</td>
+                            <td>{{ $customer->date }}</td>
+                            <td>{{ $customer->time }}</td>
+                            <td>{!! $customer->avatar !!}</td>
                         </tr>
                     @endforeach
                 </tbody>

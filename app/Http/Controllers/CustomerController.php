@@ -15,15 +15,11 @@ class CustomerController extends Controller
 
     public function store(Request $request)
     {
-        // Customer::create([
-        //     'first_name' => request('first_name'),
-        //     'last_name' => request('last_name'),
-        // ]);
-
         Customer::create([
-            'first_name' => ucfirst(request('first_name')),
-            'last_name' => ucfirst(request('last_name')),
+            'first_name' => request('first_name'),
+            'last_name' => request('last_name'),
         ]);
+
         return back();
     }
 }
